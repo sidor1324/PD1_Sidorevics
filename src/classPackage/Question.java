@@ -14,17 +14,19 @@ import javax.swing.JRadioButton;
  * @author Artjoms Sidorevics
  */
 public class Question {
+    private final boolean isLast;
     public static Question currentQuestion;
-    public static int currentQuestionID=1;
+    public static int currentQuestionID=0;
     public static List<Question> questions = new ArrayList();
     private final String text;
     private final String[] answers;    
     private final int correctAnswer;
     
-    public Question(String text, String[] answers, int correctAnswer){
+    public Question(String text, String[] answers, int correctAnswer, boolean isLast){
         this.text = text;
         this.answers = answers;
         this.correctAnswer = correctAnswer;
+        this.isLast = isLast;
     }
     public void setQuestionText(JLabel jlable){
         String t = this.text;
@@ -42,5 +44,8 @@ public class Question {
     }
     public boolean isCorrectAnswer(int answer){
         return correctAnswer == answer;
+    }
+    public boolean isLastQuestion() {
+        return currentQuestionID == questions.size();
     }
 }

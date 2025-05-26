@@ -20,7 +20,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     public PD_1_Sidorevics() {
         initComponents();
     }
-    public int answer = -1;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,12 +61,20 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
         jMGS1Test = new javax.swing.JDialog();
         jMGS1Panel = new javax.swing.JPanel();
         jTestOneQuestionText = new javax.swing.JLabel();
-        jAnswerOne = new javax.swing.JRadioButton();
-        jAnswerTwo = new javax.swing.JRadioButton();
-        jAnswerThree = new javax.swing.JRadioButton();
-        jAnswerFour = new javax.swing.JRadioButton();
+        jTest1AnswerOne = new javax.swing.JRadioButton();
+        jTest1AnswerTwo = new javax.swing.JRadioButton();
+        jTest1AnswerThree = new javax.swing.JRadioButton();
+        jTest1AnswerFour = new javax.swing.JRadioButton();
         jTestOneNextButton = new javax.swing.JButton();
         testOneBGroup = new javax.swing.ButtonGroup();
+        jMGS2Test = new javax.swing.JDialog();
+        jMGS2Panel = new javax.swing.JPanel();
+        jTestTwoQuestionText = new javax.swing.JLabel();
+        jTest2AnswerOne = new javax.swing.JRadioButton();
+        jTest2AnswerTwo = new javax.swing.JRadioButton();
+        jTest2AnswerFour = new javax.swing.JRadioButton();
+        jTestTwoNextButton = new javax.swing.JButton();
+        jTest2AnswerThree = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLoginLoginField = new javax.swing.JTextField();
@@ -110,7 +117,10 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(51, 51, 51), new java.awt.Color(0, 0, 0), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
 
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -254,6 +264,11 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
         });
 
         jTestTwo.setText("Metal Gear Solid 2: Sons of Liberty");
+        jTestTwo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTestTwoActionPerformed(evt);
+            }
+        });
 
         jTestThree.setText("Metal Gear Solid 3: Snake Eater");
 
@@ -322,19 +337,12 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             .addGroup(jMGS1PanelLayout.createSequentialGroup()
                 .addGroup(jMGS1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jMGS1PanelLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jMGS1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jMGS1PanelLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jAnswerOne))
-                            .addGroup(jMGS1PanelLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jAnswerTwo))
-                            .addGroup(jMGS1PanelLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jAnswerThree))
-                            .addGroup(jMGS1PanelLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jAnswerFour)))
+                            .addComponent(jTest1AnswerOne)
+                            .addComponent(jTest1AnswerTwo)
+                            .addComponent(jTest1AnswerThree)
+                            .addComponent(jTest1AnswerFour))
                         .addGap(0, 369, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jMGS1PanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -348,13 +356,13 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jTestOneQuestionText, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(93, 93, 93)
-                .addComponent(jAnswerOne)
+                .addComponent(jTest1AnswerOne)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jAnswerTwo)
+                .addComponent(jTest1AnswerTwo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jAnswerThree)
+                .addComponent(jTest1AnswerThree)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jAnswerFour)
+                .addComponent(jTest1AnswerFour)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jTestOneNextButton)
                 .addContainerGap())
@@ -371,19 +379,82 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             .addComponent(jMGS1Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jTestTwoNextButton.setText("Next");
+        jTestTwoNextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTestTwoNextButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jMGS2PanelLayout = new javax.swing.GroupLayout(jMGS2Panel);
+        jMGS2Panel.setLayout(jMGS2PanelLayout);
+        jMGS2PanelLayout.setHorizontalGroup(
+            jMGS2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jMGS2PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jMGS2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTestTwoQuestionText, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jMGS2PanelLayout.createSequentialGroup()
+                        .addGap(0, 312, Short.MAX_VALUE)
+                        .addComponent(jTestTwoNextButton))
+                    .addGroup(jMGS2PanelLayout.createSequentialGroup()
+                        .addGroup(jMGS2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTest2AnswerOne)
+                            .addComponent(jTest2AnswerTwo)
+                            .addComponent(jTest2AnswerFour)
+                            .addComponent(jTest2AnswerThree))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jMGS2PanelLayout.setVerticalGroup(
+            jMGS2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jMGS2PanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTestTwoQuestionText, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(jTest2AnswerOne)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTest2AnswerTwo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTest2AnswerThree)
+                .addGap(11, 11, 11)
+                .addComponent(jTest2AnswerFour)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(jTestTwoNextButton)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jMGS2TestLayout = new javax.swing.GroupLayout(jMGS2Test.getContentPane());
+        jMGS2Test.getContentPane().setLayout(jMGS2TestLayout);
+        jMGS2TestLayout.setHorizontalGroup(
+            jMGS2TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jMGS2Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jMGS2TestLayout.setVerticalGroup(
+            jMGS2TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jMGS2Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(400, 300));
 
         jLabel1.setBackground(new java.awt.Color(79, 129, 189));
         jLabel1.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 18)); // NOI18N
         jLabel1.setText("Password");
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+
+        jLoginLoginField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 93, 138), 3, true));
+
+        jLoginPasswordField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 93, 138), 3, true));
 
         jLabel2.setBackground(new java.awt.Color(192, 80, 77));
         jLabel2.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 18)); // NOI18N
         jLabel2.setText("Login");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
 
         jButton1.setBackground(new java.awt.Color(190, 75, 75));
         jButton1.setText("Atcelt");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -392,6 +463,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(74, 126, 187));
         jButton2.setText("Pieslegties");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -537,43 +609,112 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private void jTestOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestOneActionPerformed
         jMGS1Test.setVisible(true);
         jMGS1Test.setBounds(400,300, 495, 470);        
-        QuestionFileOut test = new QuestionFileOut("MGS1QuestionDB.txt", Question.currentQuestionID);
-        testOneBGroup.add(jAnswerOne);
-        testOneBGroup.add(jAnswerTwo);
-        testOneBGroup.add(jAnswerThree);
-        testOneBGroup.add(jAnswerFour);
+        QuestionFileOut test = new QuestionFileOut("MGS1QuestionDB.txt");
+        testOneBGroup.add(jTest1AnswerOne);
+        testOneBGroup.add(jTest1AnswerTwo);
+        testOneBGroup.add(jTest1AnswerThree);
+        testOneBGroup.add(jTest1AnswerFour);
         for(Question q: Question.questions){
             Question.currentQuestion = q;
             q.setQuestionText(jTestOneQuestionText);
-            q.setAnswers(jAnswerOne, 0);
-            q.setAnswers(jAnswerTwo, 1);
-            q.setAnswers(jAnswerThree, 2);
-            q.setAnswers(jAnswerFour, 3);
+            q.setAnswers(jTest1AnswerOne, 0);
+            q.setAnswers(jTest1AnswerTwo, 1);
+            q.setAnswers(jTest1AnswerThree, 2);
+            q.setAnswers(jTest1AnswerFour, 3);
             q.getCorrctAnswer();
-        }        
+        }    
     }//GEN-LAST:event_jTestOneActionPerformed
 
     private void jTestOneNextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestOneNextButtonActionPerformed
-        if(jAnswerOne.isSelected()){
-            answer = 0;
+       int answerTestOne = 0;
+        if (jTest1AnswerOne.isSelected()) {
+            answerTestOne = 1;
+        } 
+        else if (jTest1AnswerTwo.isSelected()) {
+            answerTestOne = 2;
+        } 
+        else if (jTest1AnswerThree.isSelected()) {
+            answerTestOne = 3;
+        } 
+        else if (jTest1AnswerFour.isSelected()) {
+            answerTestOne = 4;
         }
-        if(jAnswerTwo.isSelected()){
-            answer = 1;
-        }
-        if(jAnswerThree.isSelected()){
-            answer = 2;
-        }
-        if(jAnswerFour.isSelected()){
-            answer = 3;
-        }
-        if(Question.currentQuestion.isCorrectAnswer(answer)){
-            User.currentUser.setRightAnswer();
-            System.out.print("a");
+        if (Question.currentQuestion.isCorrectAnswer(answerTestOne)) {
+            User.currentUser.plusRightAnswer();
         }
         Question.currentQuestionID++;
-        
-        
+        if (Question.currentQuestionID <= Question.questions.size()-1) {
+            Question q = Question.questions.get(Question.currentQuestionID - 1);
+            Question.currentQuestion = q;
+            q.setQuestionText(jTestOneQuestionText);
+            q.setAnswers(jTest1AnswerOne, 0);
+            q.setAnswers(jTest1AnswerTwo, 1);
+            q.setAnswers(jTest1AnswerThree, 2);
+            q.setAnswers(jTest1AnswerFour, 3);
+            if (Question.currentQuestionID == Question.questions.size()-1) {
+                jTestOneNextButton.setText("End");
+            }
+        } 
+        else {
+            jMGS1Test.setVisible(false);
+            FileInputClass mark = new FileInputClass(User.currentUser);
+        }
     }//GEN-LAST:event_jTestOneNextButtonActionPerformed
+
+    private void jTestTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestTwoActionPerformed
+        jMGS2Test.setVisible(true);
+        jMGS2Test.setBounds(400,300, 495, 470);        
+        QuestionFileOut test = new QuestionFileOut("MGS2QuestionDB.txt");
+        testOneBGroup.add(jTest2AnswerOne);
+        testOneBGroup.add(jTest2AnswerTwo);
+        testOneBGroup.add(jTest2AnswerThree);
+        testOneBGroup.add(jTest2AnswerFour);
+        for(Question q: Question.questions){
+            Question.currentQuestion = q;
+            q.setQuestionText(jTestTwoQuestionText);
+            q.setAnswers(jTest2AnswerOne, 0);
+            q.setAnswers(jTest2AnswerTwo, 1);
+            q.setAnswers(jTest2AnswerThree, 2);
+            q.setAnswers(jTest2AnswerFour, 3);
+            q.getCorrctAnswer();
+        }
+    }//GEN-LAST:event_jTestTwoActionPerformed
+
+    private void jTestTwoNextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestTwoNextButtonActionPerformed
+       int answerTestTwo = 0;
+        if (jTest2AnswerOne.isSelected()) {
+            answerTestTwo = 1;
+        } 
+        else if (jTest2AnswerTwo.isSelected()) {
+            answerTestTwo = 2;
+        } 
+        else if (jTest2AnswerThree.isSelected()) {
+            answerTestTwo = 3;
+        } 
+        else if (jTest2AnswerFour.isSelected()) {
+            answerTestTwo = 4;
+        }
+        if (Question.currentQuestion.isCorrectAnswer(answerTestTwo)) {
+            User.currentUser.plusRightAnswer();
+        }
+        Question.currentQuestionID++;
+        if (Question.currentQuestionID <= Question.questions.size()-1) {
+            Question q = Question.questions.get(Question.currentQuestionID - 1);
+            Question.currentQuestion = q;
+            q.setQuestionText(jTestOneQuestionText);
+            q.setAnswers(jTest2AnswerOne, 0);
+            q.setAnswers(jTest2AnswerTwo, 1);
+            q.setAnswers(jTest2AnswerThree, 2);
+            q.setAnswers(jTest2AnswerFour, 3);
+            if (Question.currentQuestionID == Question.questions.size()-1) {
+                jTestOneNextButton.setText("End");
+            }
+        } 
+        else {
+            jMGS2Test.setVisible(false);
+            FileInputClass mark = new FileInputClass(User.currentUser);
+        }
+    }//GEN-LAST:event_jTestTwoNextButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -615,10 +756,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog jAdmin;
-    private javax.swing.JRadioButton jAnswerFour;
-    private javax.swing.JRadioButton jAnswerOne;
-    private javax.swing.JRadioButton jAnswerThree;
-    private javax.swing.JRadioButton jAnswerTwo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -640,6 +777,8 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private javax.swing.JTextField jLoginPasswordField;
     private javax.swing.JPanel jMGS1Panel;
     private javax.swing.JDialog jMGS1Test;
+    private javax.swing.JPanel jMGS2Panel;
+    private javax.swing.JDialog jMGS2Test;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -650,12 +789,22 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private javax.swing.JDialog jQuizChoice;
     private javax.swing.JDialog jRegistration;
     private javax.swing.JLabel jSysSignal;
+    private javax.swing.JRadioButton jTest1AnswerFour;
+    private javax.swing.JRadioButton jTest1AnswerOne;
+    private javax.swing.JRadioButton jTest1AnswerThree;
+    private javax.swing.JRadioButton jTest1AnswerTwo;
+    private javax.swing.JRadioButton jTest2AnswerFour;
+    private javax.swing.JRadioButton jTest2AnswerOne;
+    private javax.swing.JRadioButton jTest2AnswerThree;
+    private javax.swing.JRadioButton jTest2AnswerTwo;
     private javax.swing.JButton jTestFour;
     private javax.swing.JButton jTestOne;
     private javax.swing.JButton jTestOneNextButton;
     private javax.swing.JLabel jTestOneQuestionText;
     private javax.swing.JButton jTestThree;
     private javax.swing.JButton jTestTwo;
+    private javax.swing.JButton jTestTwoNextButton;
+    private javax.swing.JLabel jTestTwoQuestionText;
     private javax.swing.JTextField jTextLastName;
     private javax.swing.JTextField jTextLogin;
     private javax.swing.JTextField jTextName;

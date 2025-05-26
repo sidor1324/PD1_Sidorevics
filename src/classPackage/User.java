@@ -22,9 +22,16 @@ public class User {
     public boolean enter(String login, String password){
         return login.equals(this.login) && password.equals(this.password);
     }
-    public int setRightAnswer(){
+    public int plusRightAnswer(){
         Student s = new Student(name, login, password);
         return s.setRightAnswer();
+    }
+    public int getRightAnswers(){
+        Student s = new Student(name, login, password);
+        return s.get();
+    }
+    public String getName(){
+        return this.name;
     }
     
 }

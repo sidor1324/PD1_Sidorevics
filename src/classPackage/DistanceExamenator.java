@@ -18,7 +18,4 @@ public class DistanceExamenator {
         return new User(name, login, password);
                   
     }
-    private void getResult(){
-        User.currentUser.getRightAnswer();        
-    }
 }
