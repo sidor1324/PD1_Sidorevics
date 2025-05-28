@@ -5,15 +5,19 @@
 package classPackage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Artjoms Sidorevics
  */
 public class User {
-    private String name, login, password;
+    private final String name;
+    private final String login;
+    private final String password;
     public static User currentUser;
-    public static ArrayList<User> userDB = new ArrayList<>(); 
+    private static int rightAnswers = 0;
+    public static List<User> userDB = new ArrayList(); 
     public User(String name, String login, String password){
         this.name = name;
         this.login = login;
@@ -22,16 +26,14 @@ public class User {
     public boolean enter(String login, String password){
         return login.equals(this.login) && password.equals(this.password);
     }
-    public int plusRightAnswer(){
-        Student s = new Student(name, login, password);
-        return s.setRightAnswer();
-    }
-    public int getRightAnswers(){
-        Student s = new Student(name, login, password);
-        return s.get();
-    }
     public String getName(){
         return this.name;
+    }
+    public int plusRightAnswer(){
+        return this.rightAnswers++;
+    }
+    public int getMark(){
+        return this.rightAnswers;
     }
     
 }

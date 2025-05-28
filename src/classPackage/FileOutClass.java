@@ -5,7 +5,6 @@
 package classPackage;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,16 +18,18 @@ public class FileOutClass {
         readFromFile();
     }
     private void readFromFile(){
-        String strLine;
-        try {
-            FileInputStream fstream = new FileInputStream("UserDB.txt");
-            DataInputStream in = new DataInputStream(fstream);
-            BufferedReader fileout = new BufferedReader(new InputStreamReader(in));
+        try{
+            BufferedReader fileout = new BufferedReader(new InputStreamReader(new FileInputStream("UserDB.txt")));
+            String strLine;
             while ((strLine = fileout.readLine()) != null)   
             {               
-                String[] dati = strLine.split(" ");
-                User.userDB.add(new User(dati[0],dati[1],dati[2]));
+                String[] dati = strLine.split("/");
+                String name = dati[0];
+                String login = dati[1];
+                String password = dati[2];
+                User.userDB.add(new User(name, login, password));
             }
+            fileout.close();           
         }catch (IOException ex) 
         {}
     }    

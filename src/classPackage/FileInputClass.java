@@ -28,8 +28,9 @@ public class FileInputClass {
     
     private void saveToFile(String name, String login, String password){
         try {  
-            BufferedWriter wr = new  BufferedWriter(new FileWriter("UserDB.txt"));
-            wr.write(name+" "+login+" "+password+" ");
+            BufferedWriter wr = new  BufferedWriter(new FileWriter("UserDB.txt",true));
+            wr.write(name+"/"+login+"/"+password);
+            wr.newLine();
             wr.close();            
         }catch (IOException ex) 
         {}
@@ -38,7 +39,7 @@ public class FileInputClass {
     public void saveMark(User user){
         try {  
             BufferedWriter wr = new  BufferedWriter(new FileWriter("UserDBMark.txt"));
-            wr.write(user.getName()+" :Mark: "+user.getRightAnswers());
+            wr.write(user.getName()+" :Mark: "+user.getMark());
             wr.close();            
         }catch (IOException ex) 
         {}       

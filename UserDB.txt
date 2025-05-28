@@ -1,1 +1,5 @@
-Ar Raar rat 
+Ar/Raar/rat
+John/JBug/bug
+John/JDbug/gug
+Just/JJ/tt
+R/rr/l
