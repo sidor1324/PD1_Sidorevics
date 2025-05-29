@@ -1,2 +1,10 @@
-Who is Main antogonyst?:Solidus Snake:Liquid Snake:Solid Snake:Liquid Otcelot:4
-Who is main character?:Solidus Snake:Solid Snake:Hal Emmerich:Raiden:2
+What is Old Snake suffering from?:Radiation Poisoning:Accelerated aging:FOXHOUND Syndrome:Nanomachine corrosion:2
+What system controls the battlefield in MGS4?:SOP System:Patriot Net:Nano Grid:GW Protocol:1
+Who is Liquid Ocelot?:Ocelot possessed by Liquid:Solid Snake's twin:Solidus revived:Big Boss's clone:1
+What organization does Snake work with in MGS4?:FOXHOUND:Philanthropy:MILITEC:Rat Patrol 01:2
+What is the name of the AI network controlling the world?:SOP:GW:Patriots:FROGS:3
+Which character sacrifices herself in Act 4?:Naomi Hunter:Mei Ling:Sunny:EVA:1
+What is Drebin's profession?:Spy:Mercenary:Weapons launderer:PMC commander:3
+Who is the final boss of MGS4?:Ocelot:Liquid Snake:Big Boss:Solidus:1
+What disguise does Snake use in Act 1?:Militia armor:Ghillie suit:Middle Eastern robes:PMC body armor:3
+Who cooks eggs on the Nomad?:Rose:Sunny:Naomi:Meryl:2

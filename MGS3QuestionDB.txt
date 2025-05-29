@@ -1,3 +1,10 @@
-Where Main action take place?:England:Tselinoyarsk:San Francisko:Zanzibar Land:2
-Who is Main antogonyst?:Mikhail Gorbachev:Boris Yeltsin:Colonel Volgin:Revolver Otcelot:3
-Who Snake is sended to kill?:J.F Kennedy:The Boss:Lee Harvey Oswald:John McAffee:2
+What is the codename of the main character?:Solid Snake:Big Boss:Naked Snake:Venom Snake:3
+What is the name of the mission at the beginning of the game?:Virtuous Mission:Snake Eater Operation:Tselinoyarsk Drop:Foxhound Protocol:1
+Who betrays Snake during the Virtuous Mission?:Ocelot:Major Zero:The Boss:Eva:3
+What is the name of the unit led by The Boss?:Dead Cell:FOXHOUND:COBRA Unit:Sons of Liberty:3
+Which enemy is known for sniping and patience?:The End:The Fear:The Pain:The Sorrow:1
+What animal does Snake eat that heals stamina greatly?:Crocodile:King Cobra:Russian Ration:Tsuchinoko:4
+Who is EVA really working for?:USA:China:Soviet Union:Patriots:2
+What is the Shagohod?:A stealth jet:A nuclear-capable tank:A mobile fortress:An airship:2
+Where does most of the game take place?:Shadow Moses:Tselinoyarsk:Jungle of Outer Heaven:Afghanistan:2
+What happens to The Boss at the end of the game?:Escapes:Captured:Killed by Snake:Joins Ocelot:3

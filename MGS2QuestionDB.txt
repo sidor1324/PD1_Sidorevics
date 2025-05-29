@@ -1,3 +1,10 @@
-Where Main action take place?:Oil platform:Event Simulation:San Francisko:Tanker:1
-Who is Main antogonyst?:Solidus Snake:Liquid Snake:Solid Snake:Revolver Otcelot:1
-What events are replicated in that simulation?:Shadow Moses incident:Nith of September:Attack on Pear Harbour:Operation "Snake Eather":1
+Who is the protagonist for most of the game?:Solid Snake:Raiden:Otacon:Big Boss:2
+What is the name of the massive facility in the second act?:Shadow Moses:Big Shell:Outer Haven:Liberty Platform:2
+What is Arsenal Gear?:An underwater prison:A flying fortress:A giant AI-controlled battleship:A stealth helicopter:3
+Who is Raiden’s commanding officer on the Codec?:Colonel Campbell:Solidus Snake:AI construct:Major Zero:3
+What is the identity of Solidus Snake?:A clone of Big Boss:Raiden’s brother:A cyber soldier:Liquid's twin:1
+What is the Patriots true nature?:A rebel group:A shadow government:An ancient society:A computer AI network:4
+Who is the female Dead Cell member?:Fortune:Emma Emmerich:Olga Gurlukovich:Naomi Hunter:1
+What is the real identity of Iroquois Pliskin?:Raiden's brother:Solid Snake:A Russian spy:Ocelot in disguise:2
+Who is the final boss in the game?:Liquid Snake:Solidus Snake:Ocelot:Fortune:2
+What is the name of the virus used to disrupt Arsenal Gear?:FOXHOUND:Worm Cluster:GW Killer:FoxDie 2:2

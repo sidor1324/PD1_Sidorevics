@@ -1,3 +1,10 @@
-Where action take place?:Zanzibar Land:Outer Heaven:Tselinoyarsk:Shadow Moses:4
-Who is main antogonyst?:Liquid Snake:Kazuhira Miller:Colonel Volgin:Revolver Otcelot:1
-FOXDIE is?:Illness:Nanomachine-driven virus:Weapon of mass destruction:Hystorical Event:2
+Where does most of Metal Gear Solid take place?:Shadow Moses:Outer Heaven:Big Shell:Mother Base:1
+Who is the main antagonist of the game?:Liquid Snake:Revolver Ocelot:Sniper Wolf:Solidus Snake:1
+What is Metal Gear REX?:A stealth jet:A bipedal tank:A submarine:A spy satellite:2
+What gene project is central to the plot?:FOXHOUND:NanoGenes:Les Enfants Terribles:Genome Project:4
+Who is the DARPA Chief?:Donald Anderson:Jim Houseman:Roy Campbell:Hal Emmerich:1
+Which character is a sniper?:Sniper Wolf:Meryl Silverburgh:Naomi Hunter:Mei Ling:1
+What disease-like weapon targets DNA?:FOXDIE:GENO-Virus:NanoKill:Viral Sorrow:1
+How is Psycho Mantis defeated easily?:Shoot his mask:Change controller port:Throw chaff grenades:Flashbang him:2
+Who helps Snake via Codec with saving and loading?:Mei Ling:Otacon:Meryl:Naomi:1
+What disguise does Snake use at the beginning?:Tanker crew member:Navy SEAL:Genome soldier:Delivery guy:3
