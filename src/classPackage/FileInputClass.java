@@ -22,8 +22,8 @@ public class FileInputClass {
         else
             jLable.setText("Paroles nesakrit");
     }
-    public FileInputClass(User user){
-        saveMark(user);
+    public FileInputClass(User user, String testName){
+        saveMark(user, testName);
     }
     
     private void saveToFile(String name, String login, String password){
@@ -36,10 +36,10 @@ public class FileInputClass {
         {}
     }    
     
-    public void saveMark(User user){
+    public void saveMark(User user, String testName){
         try {  
             BufferedWriter wr = new  BufferedWriter(new FileWriter("UserDBMark.txt"));
-            wr.write(user.getName()+" :Mark: "+user.getMark());
+            wr.write(user.getName()+" :Mark "+testName+": "+user.getMark());
             wr.close();            
         }catch (IOException ex) 
         {}       

@@ -1,7 +1,6 @@
 package PD_1;
 
 import classPackage.*;
-import javax.swing.ImageIcon;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -107,6 +106,9 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
         jTest4AnswerThree = new javax.swing.JRadioButton();
         jTest4AnswerFour = new javax.swing.JRadioButton();
         jTestFourNextButton = new javax.swing.JButton();
+        jResultDialog = new javax.swing.JDialog();
+        jResultExitButton = new javax.swing.JButton();
+        jTestResultLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLoginLoginField = new javax.swing.JTextField();
@@ -732,6 +734,38 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jResultExitButton.setText("Exit");
+        jResultExitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jResultExitButtonActionPerformed(evt);
+            }
+        });
+
+        jTestResultLabel.setText("jLabel16");
+
+        javax.swing.GroupLayout jResultDialogLayout = new javax.swing.GroupLayout(jResultDialog.getContentPane());
+        jResultDialog.getContentPane().setLayout(jResultDialogLayout);
+        jResultDialogLayout.setHorizontalGroup(
+            jResultDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jResultDialogLayout.createSequentialGroup()
+                .addGap(157, 157, 157)
+                .addComponent(jResultExitButton)
+                .addContainerGap(171, Short.MAX_VALUE))
+            .addGroup(jResultDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTestResultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jResultDialogLayout.setVerticalGroup(
+            jResultDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jResultDialogLayout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(jTestResultLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addComponent(jResultExitButton)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(400, 300));
 
@@ -939,37 +973,53 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
     private void jTestOneNextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestOneNextButtonActionPerformed
        int answerTestOne = 0;
+       
+       if (!(jTest1AnswerOne.isSelected() ||
+           jTest1AnswerTwo.isSelected() ||
+           jTest1AnswerThree.isSelected() ||
+           jTest1AnswerFour.isSelected()))
+       {
+           return;
+       }
+       
         if (jTest1AnswerOne.isSelected()) {
             answerTestOne = 1;
+            Question.currentQuestionID++;
         } 
         else if (jTest1AnswerTwo.isSelected()) {
             answerTestOne = 2;
+            Question.currentQuestionID++;
         } 
         else if (jTest1AnswerThree.isSelected()) {
             answerTestOne = 3;
+            Question.currentQuestionID++;
         } 
         else if (jTest1AnswerFour.isSelected()) {
             answerTestOne = 4;
+            Question.currentQuestionID++;
         }
         if (Question.currentQuestion.isCorrectAnswer(answerTestOne)) {
             User.currentUser.plusRightAnswer();
         }
-        Question.currentQuestionID++;
-        if (Question.currentQuestionID <= Question.questions.size()-1) {
-            Question q = Question.questions.get(Question.currentQuestionID - 1);
+        if (Question.currentQuestionID <= Question.questions.size()-2) {
+            Question q = Question.questions.get(Question.currentQuestionID);
             Question.currentQuestion = q;
             q.setQuestionText(jTestOneQuestionText);
             q.setAnswers(jTest1AnswerOne, 0);
             q.setAnswers(jTest1AnswerTwo, 1);
             q.setAnswers(jTest1AnswerThree, 2);
             q.setAnswers(jTest1AnswerFour, 3);
-            if (Question.currentQuestionID == Question.questions.size()-1) {
+            testOneBGroup.clearSelection();
+            if (Question.currentQuestionID == Question.questions.size()-2) {
                 jTestOneNextButton.setText("End");
             }
         } 
         else {
             jMGS1Test.setVisible(false);
-            FileInputClass mark = new FileInputClass(User.currentUser);
+            jResultDialog.setBounds(400,300, 495, 470);
+            jResultDialog.setVisible(true);
+            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            FileInputClass mark = new FileInputClass(User.currentUser, "MGS1 Test");
             Question.currentQuestionID=0;
         }
     }//GEN-LAST:event_jTestOneNextButtonActionPerformed
@@ -997,20 +1047,23 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
        int answerTestTwo = 0;
         if (jTest2AnswerOne.isSelected()) {
             answerTestTwo = 1;
+            Question.currentQuestionID++;
         } 
         else if (jTest2AnswerTwo.isSelected()) {
             answerTestTwo = 2;
+            Question.currentQuestionID++;
         } 
         else if (jTest2AnswerThree.isSelected()) {
             answerTestTwo = 3;
+            Question.currentQuestionID++;
         } 
         else if (jTest2AnswerFour.isSelected()) {
             answerTestTwo = 4;
+            Question.currentQuestionID++;
         }
         if (Question.currentQuestion.isCorrectAnswer(answerTestTwo)) {
             User.currentUser.plusRightAnswer();
         }
-        Question.currentQuestionID++;
         if (Question.currentQuestionID <= Question.questions.size()-1) {
             Question q = Question.questions.get(Question.currentQuestionID - 1);
             Question.currentQuestion = q;
@@ -1019,13 +1072,17 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.setAnswers(jTest2AnswerTwo, 1);
             q.setAnswers(jTest2AnswerThree, 2);
             q.setAnswers(jTest2AnswerFour, 3);
+            testOneBGroup.clearSelection();
             if (Question.currentQuestionID == Question.questions.size()-1) {
                 jTestTwoNextButton.setText("End");
             }
         } 
         else {
             jMGS2Test.setVisible(false);
-            FileInputClass mark = new FileInputClass(User.currentUser);
+            jResultDialog.setBounds(400,300, 495, 470);
+            jResultDialog.setVisible(true);
+            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            FileInputClass mark = new FileInputClass(User.currentUser, "MGS2 Test");
             Question.currentQuestionID=0;
         }
     }//GEN-LAST:event_jTestTwoNextButtonActionPerformed
@@ -1075,20 +1132,23 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
        int answerTestTwo = 0;
         if (jTest3AnswerOne.isSelected()) {
             answerTestTwo = 1;
+            Question.currentQuestionID++;
         } 
         else if (jTest3AnswerTwo.isSelected()) {
             answerTestTwo = 2;
+            Question.currentQuestionID++;
         } 
         else if (jTest3AnswerThree.isSelected()) {
             answerTestTwo = 3;
+            Question.currentQuestionID++;
         } 
         else if (jTest3AnswerFour.isSelected()) {
             answerTestTwo = 4;
+            Question.currentQuestionID++;
         }
         if (Question.currentQuestion.isCorrectAnswer(answerTestTwo)) {
             User.currentUser.plusRightAnswer();
         }
-        Question.currentQuestionID++;
         if (Question.currentQuestionID <= Question.questions.size()-1) {
             Question q = Question.questions.get(Question.currentQuestionID - 1);
             Question.currentQuestion = q;
@@ -1097,13 +1157,17 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.setAnswers(jTest3AnswerTwo, 1);
             q.setAnswers(jTest3AnswerThree, 2);
             q.setAnswers(jTest3AnswerFour, 3);
+            testOneBGroup.clearSelection();
             if (Question.currentQuestionID == Question.questions.size()-1) {
                 jTestThreeNextButton.setText("End");
             }
         } 
         else {
             jMGS3Test.setVisible(false);
-            FileInputClass mark = new FileInputClass(User.currentUser);
+            jResultDialog.setBounds(400,300, 495, 470);
+            jResultDialog.setVisible(true);
+            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            FileInputClass mark = new FileInputClass(User.currentUser, "MGS3 Test");
             Question.currentQuestionID=0;
         }
     }//GEN-LAST:event_jTestThreeNextButtonActionPerformed
@@ -1112,20 +1176,23 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
        int answerTestTwo = 0;
         if (jTest4AnswerOne.isSelected()) {
             answerTestTwo = 1;
+            Question.currentQuestionID++;
         } 
         else if (jTest4AnswerTwo.isSelected()) {
             answerTestTwo = 2;
+            Question.currentQuestionID++;
         } 
         else if (jTest4AnswerThree.isSelected()) {
             answerTestTwo = 3;
+            Question.currentQuestionID++;
         } 
         else if (jTest4AnswerFour.isSelected()) {
             answerTestTwo = 4;
+            Question.currentQuestionID++;
         }
         if (Question.currentQuestion.isCorrectAnswer(answerTestTwo)) {
             User.currentUser.plusRightAnswer();
         }
-        Question.currentQuestionID++;
         if (Question.currentQuestionID <= Question.questions.size()-1) {
             Question q = Question.questions.get(Question.currentQuestionID - 1);
             Question.currentQuestion = q;
@@ -1134,13 +1201,17 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.setAnswers(jTest4AnswerTwo, 1);
             q.setAnswers(jTest4AnswerThree, 2);
             q.setAnswers(jTest4AnswerFour, 3);
+            testOneBGroup.clearSelection();
             if (Question.currentQuestionID == Question.questions.size()-1) {
                 jTestFourNextButton.setText("End");
             }
         } 
         else {
             jMGS4Test.setVisible(false);
-            FileInputClass mark = new FileInputClass(User.currentUser);
+            jResultDialog.setBounds(400,300, 495, 470);
+            jResultDialog.setVisible(true);
+            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            FileInputClass mark = new FileInputClass(User.currentUser, "MGS4 Test");
             Question.currentQuestionID=0;
         }
     }//GEN-LAST:event_jTestFourNextButtonActionPerformed
@@ -1163,6 +1234,10 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.getCorrctAnswer();
         }
     }//GEN-LAST:event_jTestFourActionPerformed
+
+    private void jResultExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jResultExitButtonActionPerformed
+            jResultDialog.setVisible(false);
+    }//GEN-LAST:event_jResultExitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1251,6 +1326,8 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private javax.swing.JLabel jPicture1;
     private javax.swing.JDialog jQuizChoice;
     private javax.swing.JDialog jRegistration;
+    private javax.swing.JDialog jResultDialog;
+    private javax.swing.JButton jResultExitButton;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1278,6 +1355,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private javax.swing.JButton jTestOne;
     private javax.swing.JButton jTestOneNextButton;
     private javax.swing.JLabel jTestOneQuestionText;
+    private javax.swing.JLabel jTestResultLabel;
     private javax.swing.JButton jTestThree;
     private javax.swing.JButton jTestThreeNextButton;
     private javax.swing.JButton jTestTwo;
