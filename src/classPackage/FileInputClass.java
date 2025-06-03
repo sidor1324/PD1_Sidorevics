@@ -38,7 +38,7 @@ public class FileInputClass {
     
     public void saveMark(User user, String testName){
         try {  
-            BufferedWriter wr = new  BufferedWriter(new FileWriter("UserDBMark.txt"));
+            BufferedWriter wr = new  BufferedWriter(new FileWriter("UserDBMark.txt",true));
             wr.write(user.getName()+" :Mark "+testName+": "+user.getMark());
             wr.close();            
         }catch (IOException ex) 

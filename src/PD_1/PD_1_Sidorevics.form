@@ -4,53 +4,6 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="testOneBGroup">
     </Component>
-    <Container class="javax.swing.JDialog" name="jAdmin">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel6" alignment="1" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel6" alignment="1" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel6">
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="319" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="278" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel11">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Admin&apos;s Place"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
     <Container class="javax.swing.JDialog" name="jRegistration">
 
       <Layout>
@@ -430,7 +383,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton6">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Return"/>
+                <Property name="text" type="java.lang.String" value="Atpaka&#x13c;"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
@@ -661,7 +614,7 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="If you have problems with login, thy these:&#xa;1.) Check is your login are correct&#xa;2.) Check is your password is correct&#xa;&#xa;If you new, try registration, to create new login and password"/>
+                    <Property name="text" type="java.lang.String" value="Ja rodas probl&#x113;mas ar pieteik&#x161;anos, veiciet t&#x101;l&#x101;k nor&#x101;d&#x12b;t&#x101;s darb&#x12b;bas:&#xa;1.) P&#x101;rbaudiet, vai j&#x16b;su pieteik&#x161;an&#x101;s ir pareiza.&#xa;2.) P&#x101;rbaudiet, vai j&#x16b;su parole ir pareiza.&#xa;&#xa;Ja esat jauns lietot&#x101;js, m&#x113;&#x123;iniet re&#x123;istr&#x113;ties,&#xa;lai izveidotu jaunu pieteik&#x161;an&#x101;s v&#x101;rdu un paroli."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -719,7 +672,7 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="Fill all lines with your data&#xa;&#xa;If your passwords didn&apos;t match, programm will show you that they &#xa;don&apos;t match"/>
+                    <Property name="text" type="java.lang.String" value="Aizpildiet visas rindas ar saviem datiem&#xa;&#xa;Ja j&#x16b;su paroles nesakrita, programma par&#x101;d&#x12b;s, ka t&#x101;s nesakr&#x12b;t"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -777,7 +730,7 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="Click the button with test name and thest will start&#xa;&#xa;When you answer all questions, button will switch from &quot;Next&quot; to &quot;End&quot;&#xa;when you click &quot;End&quot; button, test will close and your correct answers &#xa;will be written to database&#xa;"/>
+                    <Property name="text" type="java.lang.String" value="Noklik&#x161;&#x137;iniet uz pogas ar testa nosaukumu, un tests s&#x101;ksies.&#xa;&#xa;Kad b&#x16b;siet atbild&#x113;jis uz visiem jaut&#x101;jumiem, &#xa;poga main&#x12b;sies no &quot;T&#x101;l&#x101;k&quot; uz &quot;Beigt&quot;. &#xa;Noklik&#x161;&#x137;inot uz pogas &quot;Beigt&quot;,&#xa;tests tiks aizv&#x113;rts un j&#x16b;su pareiz&#x101;s atbildes tiks ierakst&#x12b;tas datub&#x101;z&#x113;."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1059,7 +1012,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel2" pref="119" max="32767" attributes="0"/>
+                              <Component id="jLabel2" max="32767" attributes="0"/>
                               <Component id="jLabel1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -1132,7 +1085,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Copperplate Gothic Light" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Password"/>
+            <Property name="text" type="java.lang.String" value="Parole"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true">
@@ -1172,7 +1125,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Copperplate Gothic Light" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Login"/>
+            <Property name="text" type="java.lang.String" value="Lietotajvards"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true" thickness="2">

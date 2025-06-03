@@ -30,9 +30,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private void initComponents() {
 
         testOneBGroup = new javax.swing.ButtonGroup();
-        jAdmin = new javax.swing.JDialog();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
         jRegistration = new javax.swing.JDialog();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -121,36 +118,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-
-        jLabel11.setText("Admin's Place");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11)
-                .addContainerGap(319, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11)
-                .addContainerGap(278, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jAdminLayout = new javax.swing.GroupLayout(jAdmin.getContentPane());
-        jAdmin.getContentPane().setLayout(jAdminLayout);
-        jAdminLayout.setHorizontalGroup(
-            jAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jAdminLayout.setVerticalGroup(
-            jAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
 
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
@@ -335,7 +302,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("Return");
+        jButton6.setText("Atpakaļ");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -517,7 +484,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("If you have problems with login, thy these:\n1.) Check is your login are correct\n2.) Check is your password is correct\n\nIf you new, try registration, to create new login and password");
+        jTextArea1.setText("Ja rodas problēmas ar pieteikšanos, veiciet tālāk norādītās darbības:\n1.) Pārbaudiet, vai jūsu pieteikšanās ir pareiza.\n2.) Pārbaudiet, vai jūsu parole ir pareiza.\n\nJa esat jauns lietotājs, mēģiniet reģistrēties,\nlai izveidotu jaunu pieteikšanās vārdu un paroli.");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -550,7 +517,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setText("Fill all lines with your data\n\nIf your passwords didn't match, programm will show you that they \ndon't match");
+        jTextArea2.setText("Aizpildiet visas rindas ar saviem datiem\n\nJa jūsu paroles nesakrita, programma parādīs, ka tās nesakrīt");
         jScrollPane2.setViewportView(jTextArea2);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -583,7 +550,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
-        jTextArea3.setText("Click the button with test name and thest will start\n\nWhen you answer all questions, button will switch from \"Next\" to \"End\"\nwhen you click \"End\" button, test will close and your correct answers \nwill be written to database\n");
+        jTextArea3.setText("Noklikšķiniet uz pogas ar testa nosaukumu, un tests sāksies.\n\nKad būsiet atbildējis uz visiem jautājumiem, \npoga mainīsies no \"Tālāk\" uz \"Beigt\". \nNoklikšķinot uz pogas \"Beigt\",\ntests tiks aizvērts un jūsu pareizās atbildes tiks ierakstītas datubāzē.");
         jScrollPane3.setViewportView(jTextArea3);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -771,7 +738,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(79, 129, 189));
         jLabel1.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 18)); // NOI18N
-        jLabel1.setText("Password");
+        jLabel1.setText("Parole");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
 
         jLoginLoginField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(56, 93, 138), 3, true));
@@ -780,7 +747,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(192, 80, 77));
         jLabel2.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 18)); // NOI18N
-        jLabel2.setText("Login");
+        jLabel2.setText("Lietotajvards");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
 
         jButton1.setBackground(new java.awt.Color(190, 75, 75));
@@ -847,7 +814,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -927,9 +894,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
                 jLabel15.setText(login);
                 jQuizChoice.setVisible(true);
                 jQuizChoice.setBounds(400,300, 495, 470);
-            }
-            else{
-                jSysSignal.setText("Wrong Login or Password");
             }
         }        
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -1011,14 +975,14 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.setAnswers(jTest1AnswerFour, 3);
             testOneBGroup.clearSelection();
             if (Question.currentQuestionID == Question.questions.size()-2) {
-                jTestOneNextButton.setText("End");
+                jTestOneNextButton.setText("beigas");
             }
         } 
         else {
             jMGS1Test.setVisible(false);
             jResultDialog.setBounds(400,300, 495, 470);
             jResultDialog.setVisible(true);
-            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            jTestResultLabel.setText(User.currentUser.getName()+" Jusu resultats ir: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS1 Test");
             Question.currentQuestionID=0;
             User.currentUser.setMarkNull();
@@ -1082,14 +1046,14 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.setAnswers(jTest2AnswerFour, 3);
             testOneBGroup.clearSelection();
             if (Question.currentQuestionID == Question.questions.size()-1) {
-                jTestTwoNextButton.setText("End");
+                jTestTwoNextButton.setText("Beigas");
             }
         } 
         else {
             jMGS2Test.setVisible(false);
             jResultDialog.setBounds(400,300, 495, 470);
             jResultDialog.setVisible(true);
-            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            jTestResultLabel.setText(User.currentUser.getName()+" Jusu resultats ir: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS2 Test");
             Question.currentQuestionID=0;
             User.currentUser.setMarkNull();
@@ -1175,14 +1139,14 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.setAnswers(jTest3AnswerFour, 3);
             testOneBGroup.clearSelection();
             if (Question.currentQuestionID == Question.questions.size()-1) {
-                jTestThreeNextButton.setText("End");
+                jTestThreeNextButton.setText("Beigas");
             }
         } 
         else {
             jMGS3Test.setVisible(false);
             jResultDialog.setBounds(400,300, 495, 470);
             jResultDialog.setVisible(true);
-            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            jTestResultLabel.setText(User.currentUser.getName()+" Jusu resultats ir: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS3 Test");
             Question.currentQuestionID=0;
             User.currentUser.setMarkNull();
@@ -1227,14 +1191,14 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             q.setAnswers(jTest4AnswerFour, 3);
             testOneBGroup.clearSelection();
             if (Question.currentQuestionID == Question.questions.size()-1) {
-                jTestFourNextButton.setText("End");
+                jTestFourNextButton.setText("Beigas");
             }
         } 
         else {
             jMGS4Test.setVisible(false);
             jResultDialog.setBounds(400,300, 495, 470);
             jResultDialog.setVisible(true);
-            jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
+            jTestResultLabel.setText(User.currentUser.getName()+" Jusu resultats ir: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS4 Test");
             Question.currentQuestionID=0;
             User.currentUser.setMarkNull();
@@ -1303,7 +1267,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDialog jAdmin;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1315,7 +1278,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private javax.swing.JDialog jHelpWindowRegist;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1344,7 +1306,6 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
