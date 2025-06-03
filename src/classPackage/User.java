@@ -32,6 +32,9 @@ public class User {
     public int plusRightAnswer(){
         return this.rightAnswers++;
     }
+    public int setMarkNull(){
+       return this.rightAnswers=0;
+    }
     public int getMark(){
         return this.rightAnswers;
     }

@@ -1021,6 +1021,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS1 Test");
             Question.currentQuestionID=0;
+            User.currentUser.setMarkNull();
         }
     }//GEN-LAST:event_jTestOneNextButtonActionPerformed
 
@@ -1045,6 +1046,13 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
 
     private void jTestTwoNextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestTwoNextButtonActionPerformed
        int answerTestTwo = 0;
+        if (!(jTest2AnswerOne.isSelected() ||
+           jTest2AnswerTwo.isSelected() ||
+           jTest2AnswerThree.isSelected() ||
+           jTest2AnswerFour.isSelected()))
+       {
+           return;
+       }
         if (jTest2AnswerOne.isSelected()) {
             answerTestTwo = 1;
             Question.currentQuestionID++;
@@ -1084,6 +1092,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS2 Test");
             Question.currentQuestionID=0;
+            User.currentUser.setMarkNull();
         }
     }//GEN-LAST:event_jTestTwoNextButtonActionPerformed
 
@@ -1129,7 +1138,14 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
     }//GEN-LAST:event_jTestThreeActionPerformed
 
     private void jTestThreeNextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestThreeNextButtonActionPerformed
-       int answerTestTwo = 0;
+        int answerTestTwo = 0;
+        if (!(jTest3AnswerOne.isSelected() ||
+           jTest3AnswerTwo.isSelected() ||
+           jTest3AnswerThree.isSelected() ||
+           jTest3AnswerFour.isSelected()))
+        {
+           return;
+        }
         if (jTest3AnswerOne.isSelected()) {
             answerTestTwo = 1;
             Question.currentQuestionID++;
@@ -1169,11 +1185,19 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS3 Test");
             Question.currentQuestionID=0;
+            User.currentUser.setMarkNull();
         }
     }//GEN-LAST:event_jTestThreeNextButtonActionPerformed
 
     private void jTestFourNextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTestFourNextButtonActionPerformed
        int answerTestTwo = 0;
+        if (!(jTest4AnswerOne.isSelected() ||
+           jTest4AnswerTwo.isSelected() ||
+           jTest4AnswerThree.isSelected() ||
+           jTest4AnswerFour.isSelected()))
+        {
+           return;
+        }
         if (jTest4AnswerOne.isSelected()) {
             answerTestTwo = 1;
             Question.currentQuestionID++;
@@ -1213,6 +1237,7 @@ public class PD_1_Sidorevics extends javax.swing.JFrame {
             jTestResultLabel.setText(User.currentUser.getName()+" Your result is: "+User.currentUser.getMark());
             FileInputClass mark = new FileInputClass(User.currentUser, "MGS4 Test");
             Question.currentQuestionID=0;
+            User.currentUser.setMarkNull();
         }
     }//GEN-LAST:event_jTestFourNextButtonActionPerformed
 
